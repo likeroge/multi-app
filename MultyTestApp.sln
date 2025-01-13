@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultyTestApp", "MultyTestApp\MultyTestApp.csproj", "{BB5BE3E5-195E-4765-BB98-C7AAE0C17FF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp1", "BlazorApp1\BlazorApp1.csproj", "{33E4C913-ECE4-4CAB-B28A-0F86E6845A1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllTestPro", "AllTestPro\AllTestPro.csproj", "{36CACB8A-D37A-46B2-86C4-0AE7B26B8D17}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB5BE3E5-195E-4765-BB98-C7AAE0C17FF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB5BE3E5-195E-4765-BB98-C7AAE0C17FF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB5BE3E5-195E-4765-BB98-C7AAE0C17FF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB5BE3E5-195E-4765-BB98-C7AAE0C17FF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33E4C913-ECE4-4CAB-B28A-0F86E6845A1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33E4C913-ECE4-4CAB-B28A-0F86E6845A1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33E4C913-ECE4-4CAB-B28A-0F86E6845A1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33E4C913-ECE4-4CAB-B28A-0F86E6845A1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36CACB8A-D37A-46B2-86C4-0AE7B26B8D17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36CACB8A-D37A-46B2-86C4-0AE7B26B8D17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36CACB8A-D37A-46B2-86C4-0AE7B26B8D17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36CACB8A-D37A-46B2-86C4-0AE7B26B8D17}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

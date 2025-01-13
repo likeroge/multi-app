@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  mutltiapp-backend:
+    image: mcr.microsoft.com/dotnet/sdk:6.0
+    container_name: mutltiapp-backend
+    volumes:
+      - ./MultyLayerApp:/app
+    working_dir: /app
+    environment:
+      - ASPNETCORE_URLS=http://*:5010
+    ports:
+      - "5010:5010"
+    command: bash -c "dotnet publish -c Release MultyTestApp -o ./publish && dotnet ./publish/MultyTestApp.dll"
+  
+  mutltiapp-frontend:
+    image: mcr.microsoft.com/dotnet/sdk:6.0
+    container_name: mutltiapp-frontend
+    volumes:
+      - ./BlazorApp1:/app
+    working_dir: /app
+    environment:
+      - ASPNETCORE_URLS=http://*:5011
+    ports:
+      - "5011:5011"
+    command: bash -c "dotnet publish -c Release BlazorApp1 -o ./publish && dotnet ./publish/BlazorApp1.dll"

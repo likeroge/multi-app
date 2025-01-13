@@ -1,0 +1,33 @@
+@page "/users"
+@using BlazorApp1.Models
+@using BlazorApp1.Services
+@inject UsersService UsersService
+@inject NavigationManager NavigationManager
+@inject IJSRuntime JsRuntime
+
+<h3>Users</h3>
+@if (Users == null )
+{
+    <div>No data</div>
+}
+else
+{
+    @foreach (var user in Users)
+    {
+        <p>@user.Name</p>
+    }    
+}
+ 
+<button onclick="@(() => NavigationManager.NavigateTo("/"))">Back</button>
+
+@code {
+    [Parameter] public IEnumerable<User>? Users { get; set; }
+
+    // protected override  Task OnInitializedAsync()
+    protected override void OnInitialized()
+    {
+        Users =  UsersService.GetUsers();
+        // await JsRuntime.InvokeAsync<string>("console.log", Users);
+        Console.WriteLine(Users);
+    }
+}

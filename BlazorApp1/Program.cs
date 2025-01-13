@@ -10,8 +10,8 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
 
-// builder.Services.AddScoped(_=>new HttpClient{BaseAddress = new Uri(builder.Configuration["ApiUrl"]) });
-builder.Services.AddScoped(_=>new HttpClient{BaseAddress = new Uri("http://localhost:5010/api/") });
+builder.Services.AddScoped(_=>new HttpClient{BaseAddress = new Uri(builder.Configuration["BaseUrl"]) });
+// builder.Services.AddScoped(_=>new HttpClient{BaseAddress = new Uri("http://localhost:5010/api/") });
 
 builder.Services.AddScoped<UsersService>();
 

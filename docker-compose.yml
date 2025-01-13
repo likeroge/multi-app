@@ -11,6 +11,8 @@ services:
       - ASPNETCORE_URLS=http://*:5010
     ports:
       - "5010:5010"
+    networks:
+      - multiapp-network
     command: bash -c "dotnet publish -c Release ./MultyTestApp.csproj -o ./publish && dotnet ./publish/MultyTestApp.dll"
   
   mutltiapp-frontend:
@@ -23,4 +25,10 @@ services:
       - ASPNETCORE_URLS=http://*:5011
     ports:
       - "5011:5011"
+    networks:
+      - multiapp-network
     command: bash -c "dotnet publish -c Release ./BlazorApp1.csproj -o ./publish && dotnet ./publish/BlazorApp1.dll"
+
+networks:
+  multiapp-network:
+    driver: bridge

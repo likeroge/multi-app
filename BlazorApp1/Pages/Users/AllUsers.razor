@@ -4,8 +4,11 @@
 @inject UsersService UsersService
 @inject NavigationManager NavigationManager
 @inject IJSRuntime JsRuntime
+@inject IConfiguration Configuration
 
 <h3>Users</h3>
+<div>@Configuration["BaseUrl"]</div>
+
 @if (Users == null )
 {
     <div>No data</div>
@@ -27,7 +30,7 @@ else
     protected override void OnInitialized()
     {
         Users =  UsersService.GetUsers();
-        // await JsRuntime.InvokeAsync<string>("console.log", Users);
+        JsRuntime.InvokeAsync<string>("console.log", Users);
         Console.WriteLine(Users);
     }
 }
